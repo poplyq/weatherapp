@@ -1,6 +1,6 @@
 import React from 'react'
 import { RoutesType } from './routes'
-import { Route, Routes } from 'react-router'
+import { Route, Routes } from 'react-router-dom'
 
 interface RouterProps {
   routes: RoutesType[]

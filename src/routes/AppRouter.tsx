@@ -3,11 +3,7 @@ import { publickRoutes } from './routes'
 import Router from './Router'
 
 const AppRouter = () => {
-  return (
-    <div>
-      <Router routes={publickRoutes} />
-    </div>
-  )
+  return <Router routes={publickRoutes} />
 }
 
 export default AppRouter
