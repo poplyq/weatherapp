@@ -1,22 +1,24 @@
 export interface weatherDTO {
   current_weather: currentWeather
   elevation: number
-  hourly: Hourly
-  hourly_units: { temperature_2m: string; time: string }
+  daily: Daily
+  daily_units: { temperature_2m_max: string; time: string }
   latitude: number
   longitude: number
   timezone: string
   utc_offset_seconds: number
 }
 
-interface currentWeather {
+export interface currentWeather {
   is_day: number
   weathercode: number
   winddirection: number
   windspeed: number
+  temperature: number
 }
 
-interface Hourly {
-  temperature_2m: number[]
+interface Daily {
+  temperature_2m_max: number[]
+  temperature_2m_min: number[]
   time: string[]
 }

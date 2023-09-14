@@ -20,7 +20,7 @@ export const dataApi = createApi({
           params: {
             latitude,
             longitude,
-            hourly: 'temperature_2m',
+            daily: 'temperature_2m_max,temperature_2m_min',
             current_weather: 'true',
             timezone: 'auto',
             forecast_days: 7,
