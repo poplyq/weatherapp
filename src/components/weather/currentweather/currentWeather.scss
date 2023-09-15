@@ -2,11 +2,14 @@
     .currentDay{
         width: 100%;
         height: 80vh;
-       background-color: rgb(200, 221, 255);
+       background-color: rgb(132, 176, 247);
+       opacity: 0.8;
     }
     .currentNight{
         width: 100%;
         height: 80vh;
-        background-color: rgb(185, 185, 214);
+        background-color: rgb(69, 69, 174);
+        opacity: 0.8;
+        color: white;
     }
 }

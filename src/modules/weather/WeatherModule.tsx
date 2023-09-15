@@ -1,8 +1,10 @@
 import React from 'react'
 import { useGetForecastQuery } from '../../store/api/dataApi'
 import { CurrentWeather } from '../../components/weather/currentweather/CurrentWeather'
-import { dateTransform } from '../../helpers/functions/dataTransform'
+import { dateTransform } from '../../helpers/functions/dateTransform'
 import { ForecastTable } from '../../components/weather/forecast/ForecastTable'
+import './weatherModule.scss'
+
 interface WeatherModuleProps {
   longitude: string
   latitude: string
@@ -10,12 +12,10 @@ interface WeatherModuleProps {
 }
 export const WeatherModule = ({ longitude, latitude, title }: WeatherModuleProps) => {
   const { data } = useGetForecastQuery({ latitude, longitude })
-  console.log(data)
-
   data && console.log(dateTransform(data.daily.time))
 
   return (
-    <div>
+    <div className='weatherModule'>
       <p>Погода в {title}</p>
       {data && <CurrentWeather currentWeather={data.current_weather} />}
       {data && (

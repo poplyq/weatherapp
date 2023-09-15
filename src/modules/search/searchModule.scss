@@ -1,0 +1,27 @@
+.searchModule{
+    width: 100%;
+    padding: 3%;
+    position: relative;
+    .input{
+        width: 30%;
+        height: 1.3em;
+        position: relative;
+        z-index: 10;
+    }
+}
+@media (max-width: 768px){
+    .searchModule{
+
+        .input{
+            width: 50%;
+        }
+    } 
+}
+@media (max-width: 380px){
+    .searchModule{
+        padding: 5px;
+        .input{
+            width: 90%;
+        }
+    } 
+}

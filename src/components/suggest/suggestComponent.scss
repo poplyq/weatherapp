@@ -1,3 +1,10 @@
 .suggestTitle{
-    
+    text-align: left;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    margin-top: 5px;
+}
+.suggestTitle:hover{
+    transform: scale(1.05);
 }
