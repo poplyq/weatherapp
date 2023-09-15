@@ -12,8 +12,6 @@ interface WeatherModuleProps {
 }
 export const WeatherModule = ({ longitude, latitude, title }: WeatherModuleProps) => {
   const { data } = useGetForecastQuery({ latitude, longitude })
-  data && console.log(dateTransform(data.daily.time))
-  console.log(data)
 
   return (
     <div className='weatherModule'>

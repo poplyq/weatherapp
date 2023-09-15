@@ -1,5 +1,6 @@
 import React from 'react'
 import './forecastTable.scss'
+import TextComp from '../../common/TextComp'
 
 interface ForecastTableProps {
   days: string[]
@@ -11,9 +12,9 @@ export const ForecastTable = ({ days, dayTemperature, nightTemperature }: Foreca
     <div className='forecastTable'>
       {days.map((day, index) => (
         <div key={day}>
-          <p className='forecastElement'>{day}</p>
-          <p className='forecastElement'>{dayTemperature[index]} °C</p>
-          <p className='forecastElement'>{nightTemperature[index]} °C</p>
+          <TextComp text={day} />
+          <TextComp text={`${dayTemperature[index]} °C`} />
+          <TextComp text={`${nightTemperature[index]} °C`} />
         </div>
       ))}
     </div>

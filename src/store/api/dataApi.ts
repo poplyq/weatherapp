@@ -29,8 +29,7 @@ export const dataApi = createApi({
       },
       async onQueryStarted(_, { queryFulfilled }) {
         try {
-          const { data } = await queryFulfilled
-          console.log(data)
+          await queryFulfilled
         } catch (e) {
           console.log(e)
         }

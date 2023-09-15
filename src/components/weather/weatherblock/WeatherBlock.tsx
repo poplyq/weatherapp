@@ -11,6 +11,7 @@ import rainshower from './icons/rainshower.svg'
 import thunder from './icons/thunder.svg'
 import unkn from './icons/unkn.svg'
 import './weatherBlock.scss'
+import TextComp from '../../common/TextComp'
 
 interface WeatherBlockProps {
   weathercode: number
@@ -141,7 +142,7 @@ export const WeatherBlock = ({ weathercode }: WeatherBlockProps) => {
   return (
     <div className='weatherBlockContainer'>
       <img src={icon} className='weatherIcon' />
-      <p className='weatherTitle'> {weatherTitle}</p>
+      <TextComp text={weatherTitle} />
     </div>
   )
 }
