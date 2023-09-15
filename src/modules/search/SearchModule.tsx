@@ -7,8 +7,8 @@ import './searchModule.scss'
 
 export const SearchModule = () => {
   const [getSuggest, { data, isSuccess }] = useGetSuggestMutation()
-  const [isActive, setIsActive] = useState<boolean>(false)
   const [search, setSearch] = useState<string>('')
+  const [isActive, setIsActive] = useState<boolean>(false)
   const newValue = useDebounce(search, 1000)
   const toogle = () => setIsActive(!isActive)
   const close = () => {

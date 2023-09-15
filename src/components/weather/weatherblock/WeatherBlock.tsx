@@ -139,9 +139,9 @@ export const WeatherBlock = ({ weathercode }: WeatherBlockProps) => {
     }
   }, [weathercode])
   return (
-    <div>
+    <div className='weatherBlockContainer'>
       <img src={icon} className='weatherIcon' />
-      <p> {weatherTitle}</p>
+      <p className='weatherTitle'> {weatherTitle}</p>
     </div>
   )
 }

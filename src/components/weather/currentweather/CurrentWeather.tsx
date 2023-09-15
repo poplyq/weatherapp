@@ -4,14 +4,17 @@ import './currentWeather.scss'
 import { WeatherBlock } from '../weatherblock/WeatherBlock'
 interface CurrentWeatherProps {
   currentWeather: currentWeather
+  city: string
 }
-export const CurrentWeather = ({ currentWeather }: CurrentWeatherProps) => {
+export const CurrentWeather = ({ currentWeather, city }: CurrentWeatherProps) => {
   return (
     <div className='currentContainer'>
       <div className={currentWeather.is_day ? 'currentDay' : 'currentNight'}>
-        <WeatherBlock weathercode={currentWeather.weathercode} />
-        <p> Температура {currentWeather.temperature} С</p>
-        <p> скорость ветра {currentWeather.windspeed} м/с</p>
+        <div className='currentInfoBlock'>
+          <p className='currentTemperature'> {currentWeather.temperature} °C</p>
+          <WeatherBlock weathercode={currentWeather.weathercode} />
+          <p className='currentCity'>{city}</p>
+        </div>
       </div>
     </div>
   )

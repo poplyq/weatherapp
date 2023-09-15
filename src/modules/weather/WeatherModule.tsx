@@ -13,11 +13,11 @@ interface WeatherModuleProps {
 export const WeatherModule = ({ longitude, latitude, title }: WeatherModuleProps) => {
   const { data } = useGetForecastQuery({ latitude, longitude })
   data && console.log(dateTransform(data.daily.time))
+  console.log(data)
 
   return (
     <div className='weatherModule'>
-      <p>Погода в {title}</p>
-      {data && <CurrentWeather currentWeather={data.current_weather} />}
+      {data && <CurrentWeather currentWeather={data.current_weather} city={title} />}
       {data && (
         <ForecastTable
           days={dateTransform(data.daily.time)}
